@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.dev.parkingapp.HomeActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Fee"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textSize="24sp" />
+
+    <View
+        android:id="@+id/title_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/title"
+        android:background="@android:color/holo_green_dark"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_line"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Vehicle Type"
+            android:textSize="22sp"/>
+
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/car">
+            <RadioButton
+                android:id="@+id/lorry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorry"/>
+            <RadioButton
+                android:id="@+id/nissan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nissan"/>
+            <RadioButton
+                android:id="@+id/car"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Car"/>
+            <RadioButton
+                android:id="@+id/bus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bus"/>
+            <RadioButton
+                android:id="@+id/motorcycle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Motorcycle"/>
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAllCaps="true"
+                android:text="hours"
+                />
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:hint="hours"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:id="@+id/calculate"
+            android:textStyle="normal"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="16dp"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</RelativeLayout>
