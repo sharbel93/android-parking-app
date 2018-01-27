@@ -62,9 +62,20 @@ public class HomeActivity extends AppCompatActivity {
 
                     int selectedId = vehicleType.getCheckedRadioButtonId();
                     int parkingHours = Integer.parseInt(hours.getText().toString().trim());
-                    if(selectedId == lorry.getId()) {
-
+                    if (selectedId == lorry.getId()) {
+                        fee.setText("Parking Fee : " + (500 * parkingHours));
+                    } else if (selectedId == bus.getId()) {
+                        fee.setText("Parking Fee : " + (400 * parkingHours));
+                    } else if (selectedId == motorcycle.getId()) {
+                        fee.setText("Parking Fee : " + (50 * parkingHours));
+                    } else if (selectedId == car.getId()) {
+                        fee.setText("Parking Fee : " + (200 * parkingHours));
+                    } else if (selectedId == nissan.getId()) {
+                        fee.setText("Parking Fee : " + (300 * parkingHours));
+                    } else {
+                        fee.setText("Parking Fee : " + (0));
                     }
+
                 } else {
                     Toast.makeText(HomeActivity.this,"Enter Hours",Toast.LENGTH_SHORT).show();
                 }
